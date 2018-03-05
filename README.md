@@ -1,2 +1,2 @@
 # Mr.WInds
-Try database with JAVA
+This is my first time using Java to deal with the SQLite.
