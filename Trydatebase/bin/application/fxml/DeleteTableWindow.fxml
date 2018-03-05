@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="179.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DeleteTableController">
+   <children>
+      <Label layoutX="72.0" layoutY="48.0" text="表名：">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="tableList" layoutX="149.0" layoutY="49.0" prefHeight="33.0" prefWidth="164.0" />
+      <Button layoutX="72.0" layoutY="116.0" mnemonicParsing="false" onAction="#deleteTable" prefHeight="30.0" prefWidth="97.0" text="确定">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="216.0" layoutY="116.0" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="97.0" text="取消">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

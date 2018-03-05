@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="background" fx:id="anchorPane" prefHeight="314.0" prefWidth="459.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainWindowController">
+   <children>
+      <Button id="connect" fx:id="connectToDatabase" layoutX="8.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadDatabase" />
+      <Button id="button" fx:id="closeDatabase" layoutX="278.0" layoutY="30.0" mnemonicParsing="false" onAction="#closeCurrectWindow" />
+      <Button id="button" fx:id="deleteTable" layoutX="78.0" layoutY="30.0" mnemonicParsing="false" onAction="#deleteTable" />
+      <Button id="button" fx:id="ins" layoutX="198.0" layoutY="30.0" mnemonicParsing="false" onAction="#creatNewRow" />
+      <Button id="button" fx:id="del" layoutX="238.0" layoutY="30.0" mnemonicParsing="false" onAction="#delete" />
+      <Button id="button" fx:id="newColumn" layoutX="118.0" layoutY="30.0" mnemonicParsing="false" onAction="#openInsertWindow" />
+      <Button id="button" fx:id="openTable" layoutX="38.0" layoutY="30.0" mnemonicParsing="false" onAction="#GetTableNameWindow" />
+      <TableView fx:id="tableView" cache="true" layoutY="64.0" prefHeight="236.0" prefWidth="452.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0">
+         <contextMenu>
+            <ContextMenu fx:id="rightMenu" minWidth="100.0">
+              <items>
+                  <Menu fx:id="isVisible" mnemonicParsing="false" text="已显示的列" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="rNewCol" mnemonicParsing="false" onAction="#openInsertWindow" text="新建列                     " />
+                  <MenuItem fx:id="rNewRow" mnemonicParsing="false" onAction="#creatNewRow" text="新建行" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="rDeleteTable" mnemonicParsing="false" onAction="#deleteTable" text="删除表" />
+                  <MenuItem fx:id="rDeleteCol" mnemonicParsing="false" onAction="#deleteColumn" text="删除列" />
+                  <MenuItem fx:id="rDeleteRow" mnemonicParsing="false" onAction="#delete" text="删除行" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TableView>
+      <MenuBar id="menu-bar" fx:id="mbr" prefHeight="25.0" prefWidth="468.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="文件">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadDatabase" text="连接         Alt+O" />
+                  <MenuItem mnemonicParsing="false" onAction="#GetTableNameWindow" text="选择表      Alt+T" />
+              <MenuItem mnemonicParsing="false" onAction="#closeCurrectWindow" text="关闭         Alt+Esc" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuEdit" mnemonicParsing="false" text="编辑">
+            <items>
+                  <Menu mnemonicParsing="false" text="新建">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openInsertWindow" text="新建列        Alt+C" />
+                        <MenuItem mnemonicParsing="false" onAction="#creatNewRow" text="新建行        Alt+R" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#deleteTable" text="删除表      Alt+Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteColumn" text="删除列      Alt+D" />
+              <MenuItem mnemonicParsing="false" onAction="#delete" text="删除行      Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutWindow" text="关于" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="deleteCol" layoutX="158.0" layoutY="30.0" mnemonicParsing="false" onAction="#deleteColumn" />
+   </children>
+</AnchorPane>

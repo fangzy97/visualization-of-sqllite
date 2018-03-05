@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="173.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DeleteColumnController">
+   <children>
+      <Label layoutX="56.0" layoutY="39.0" text="列名：">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="columnName" layoutX="131.0" layoutY="39.0" prefHeight="33.0" prefWidth="150.0" />
+      <Button layoutX="56.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteColumn" prefHeight="30.0" prefWidth="97.0" text="确定">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="184.0" layoutY="110.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="23.0" prefWidth="97.0" text="取消">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

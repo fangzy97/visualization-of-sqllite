@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="181.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.NewTableWindowController">
+   <children>
+      <Label layoutX="43.0" layoutY="46.0" text="表名：">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newTableName" layoutX="128.0" layoutY="48.0" prefHeight="30.0" prefWidth="152.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="43.0" layoutY="115.0" mnemonicParsing="false" onAction="#confirm" prefHeight="30.0" prefWidth="75.0" text="确认">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="204.0" layoutY="115.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="75.0" text="取消">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

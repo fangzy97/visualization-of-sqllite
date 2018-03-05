@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="222.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.InsertColumnController">
+   <children>
+      <Label layoutX="38.0" layoutY="57.0" text="列名称">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="columnName" layoutX="131.0" layoutY="59.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="38.0" layoutY="111.0" text="列类型">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="38.0" layoutY="162.0" mnemonicParsing="false" onAction="#comfirm" prefHeight="30.0" prefWidth="104.0" text="确定">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="232.0" layoutY="162.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="104.0" text="取消">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="columnType" layoutX="131.0" layoutY="115.0" prefHeight="30.0" prefWidth="202.0" />
+   </children>
+</AnchorPane>
